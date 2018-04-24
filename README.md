@@ -9,7 +9,7 @@ Good Sheet was built on the work of MANY others. I'll add references soon!
 ## API
 	
 ### postToSheet(act, val, sheet)
-Post data to the google sheet. You can edit this function to send different data! 
+Post data to the google sheet. You can edit this function to send different data, but make sure that the headers on the Google Sheet and the keys in the payload are the same! 
 
 	act : String | Action you want to store
 	val : String | Data you want to store 
