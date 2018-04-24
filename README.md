@@ -5,6 +5,8 @@ This was built on the work of MANY others. I'll add references soon!
 
 <img src="https://raw.githubusercontent.com/Luxapodular/GoodSheet/master/images/overview.png" alt="Image of demo Google Sheet" width="400" />
 
+## API
+
 ## Getting Started (Setting up the sheet 5-10 minutes). 
 
 ### There are quite a few steps, but don't get discouraged! Once you've got it set up it will be worth it! 
@@ -59,9 +61,9 @@ A new window will popup with options. Make sure that 'Project Version' is "New",
 
 <img src="https://raw.githubusercontent.com/Luxapodular/GoodSheet/master/images/app_url.png" alt="app_url" width="400" />
 
-Goto `scripts.js` and replace "<Your App URL>" with the URL of your app. This must be a string! 
+Goto `scripts.js` and replace "\<Your App URL\>" with the URL of your app. This must be a string! 
 
 <img src="https://raw.githubusercontent.com/Luxapodular/GoodSheet/master/images/your_url.png" alt="your url" width="400" />
 
-7. You should now be able to call the functions inside of `scripts.js`!
+7. You should now be able to use the Good Sheet API with your sheet!
 
