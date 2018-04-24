@@ -1,7 +1,7 @@
 # GoodSheet
 A tiny library that makes it easy to post and get data from a google sheet.
 
-This was built on the work of MANY others. I'll add references soon!
+Good Sheet was built on the work of MANY others. I'll add references soon!
 
 <img src="https://raw.githubusercontent.com/Luxapodular/GoodSheet/master/images/overview.png" alt="Image of demo Google Sheet" width="400" />
 
@@ -30,6 +30,9 @@ Returns the alement at a specific cell using A1 notation as a String. Ex. To get
 	callback : function | function to send array to when returned.
 	sheet : String | The sub sheet to post to
 
+As a note: 'sheet' refers to the name of the sub sheet you are sending requests to. This can be found on the bottom left of your Google Sheet.
+
+<img src="https://raw.githubusercontent.com/Luxapodular/GoodSheet/master/images/sheet1.png" alt="Sheet Name Location" width="300" />
 
 ## Getting Started (Setting up the sheet 5-10 minutes). 
 
