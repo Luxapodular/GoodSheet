@@ -17,7 +17,7 @@ function postToSheet(act, val, sheet) {
     post: true,
   }
   
-  sendObj(payload); 
+  sendPayload(payload); 
 }
 
 // Returns all elements of a column that is headed by "headerName" as an array.
@@ -32,19 +32,7 @@ function getColumn(headerName, callback, sheet) {
     sheetName: sheet,
   }
   
-  // If no callback supplied, just log the result. 
-  if (callback === undefined) {
-    callback = console.log; 
-  }
-  
-  response = $.ajax(
-    {
-      url: APP_URL, 
-      method: "GET",
-      dataType: "json",
-      data: obj,
-      success: function(response) { callback(response.column) },
-    }).success();
+  sendPayload(payload, callback, "column"); 
 }
 
 // Returns the alement at a specific cell using A1 notation. Ex. TO get the item in row 3 column c, call getItem("3", "c")
@@ -54,12 +42,20 @@ function getColumn(headerName, callback, sheet) {
 // callback : function | function to send array to when returned.
 // sheet : String | The sub sheet to post to
 function getItem(row, col, callback, sheet) {
-  
   payload = {
     getItem: true,
     cell: col+row,
     sheetName: sheet,
   }
+  
+  sendPayload(payload, callback, "cell"); 
+}
+
+function runColumnCallback(response, callback) {
+  callback(response.column); 
+}
+
+function sendPayload(payload, callback, key) {
   
   // If no callback supplied, just log the result. 
   if (callback === undefined) {
@@ -71,21 +67,13 @@ function getItem(row, col, callback, sheet) {
       url: APP_URL, 
       method: "GET",
       dataType: "json",
-      data: obj,
-      success: function(response) { callback(response.cell) },
-    }).success();
-}
-
-function runColumnCallback(response, callback) {
-  callback(response.column); 
-}
-
-function sendObj(obj) {
-    var response = $.ajax(
-    {
-      url: APP_URL, 
-      method: "GET",
-      dataType: "json",
-      data: obj,
+      data: payload,
+      success: function(response) { 
+        if (key !== undefined){
+          callback(response[key]);
+        } else {
+          callback(response); 
+        }
+      },
     }).success();
 }
