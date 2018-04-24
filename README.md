@@ -9,11 +9,13 @@ Good Sheet was built on the work of MANY others. I'll add references soon!
 ## API
 	
 ### postToSheet(act, val, sheet)
-Post data to the google sheet. You can edit this function to send different data, but make sure that the headers on the Google Sheet and the keys in the payload are the same! 
+Post data to the google sheet.  
 
 	act : String | Action you want to store
 	val : String | Data you want to store 
 	sheet : String | The sub sheet to post to
+	
+You can edit this function to send different data, but make sure that the headers on the Google Sheet and the keys in the payload are the same!
 	
 ### getColumn(headerName, callback, sheet)
 Returns all elements of a column that is headed by "headerName" as an array.
