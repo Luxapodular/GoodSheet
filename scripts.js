@@ -1,5 +1,5 @@
 // Change the "url" value to the url of your web app;
-APP_URL = "https://script.google.com/macros/s/AKfycbzLWkOIkefPAACWJf0nlC3Y8munYM8d3xWjRqhhh4z6wwWIctc/exec"
+APP_URL = "<YOUR_APP_URL>";
 
 function sendObj(obj) {
     var response = $.ajax(
