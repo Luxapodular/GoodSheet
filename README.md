@@ -21,7 +21,7 @@ You can edit this function to send different data, but make sure that the header
 Returns all elements of a column that is headed by "headerName" as an array.
 
 	headerName : String | Header name of the column you want. Must be in the first row of the sheet.
-	callback : function | function to send array to when returned.
+	callback : callable | function to send array to when returned.
 	sheet : String | The sub sheet to post to
 	
 ### getItem(row, col, callback, sheet)
@@ -29,7 +29,7 @@ Returns the alement at a specific cell using A1 notation as a String. Ex. To get
 
 	row : String | row of item to retrieve. Should be a number.
 	col : String | column of item to retrieve. Should be a letter.
-	callback : function | function to send array to when returned.
+	callback : callable | function to send String to when returned.
 	sheet : String | The sub sheet to post to
 
 As a note: 'sheet' refers to the name of the sub sheet you are sending requests to. This can be found on the bottom left of your Google Sheet.
